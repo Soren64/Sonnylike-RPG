@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=2 format=3 uid="uid://0stgmm27beml"]
+
+[ext_resource type="Script" path="res://scripts/statuses/status_effect.gd" id="1_laa6l"]
+
+[resource]
+script = ExtResource("1_laa6l")
+effect_name = "Stun"
+description = "Prevents the target from acting on a turn."
+duration = 1
+is_buff = false
+stat_modifiers = {}
+unique_id = "stun"
+trigger_timing = "end"
+per_turn_effects = {
+"dot_damage": 0,
+"hot_heal": 0,
+"mp_regen": 0
+}

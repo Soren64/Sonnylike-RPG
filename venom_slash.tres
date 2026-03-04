@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="GenericStatusSkill" load_steps=2 format=3 uid="uid://bxt04pp67gvvk"]
+
+[ext_resource type="Script" path="res://scripts/skills/generic_status_skill.gd" id="1_pmrk2"]
+
+[resource]
+script = ExtResource("1_pmrk2")
+name = "Venom Slash"
+cost = 15
+cost_type = "mp"
+power = 5
+description = ""
+target_type = "enemy"
+target_scope = "single"
+max_targets = 0
+skill_type = "debuff"
+cooldown = 1
+status_applied = ["poison"]

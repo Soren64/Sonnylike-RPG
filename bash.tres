@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StrikeSkill" load_steps=2 format=3 uid="uid://bbiiqase0rqdf"]
+
+[ext_resource type="Script" path="res://scripts/skills/strike.gd" id="1_tp77j"]
+
+[resource]
+script = ExtResource("1_tp77j")
+name = "Bash"
+cost = 0
+cost_type = "mp"
+power = 10
+description = ""
+target_type = "enemy"
+target_scope = "single"
+max_targets = 0
+skill_type = "physical"
+cooldown = 1
+status_applied = []

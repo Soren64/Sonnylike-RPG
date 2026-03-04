@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="HealSkill" load_steps=2 format=3 uid="uid://oytdhpck7rfo"]
+
+[ext_resource type="Script" path="res://scripts/skills/heal.gd" id="1_6rcgk"]
+
+[resource]
+script = ExtResource("1_6rcgk")
+name = "Heal Pulse"
+cost = 25
+cost_type = "mp"
+power = 50
+description = "Heal a single friendly unit for 50 hp. Costs 25 MP."
+target_type = "ally_incl_self"
+target_scope = "single"
+max_targets = 0
+skill_type = "heal"
+cooldown = 2
+status_applied = []

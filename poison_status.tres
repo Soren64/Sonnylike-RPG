@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=2 format=3 uid="uid://dy2eumojwn2wq"]
+
+[ext_resource type="Script" path="res://scripts/statuses/status_effect.gd" id="1_bmxuu"]
+
+[resource]
+script = ExtResource("1_bmxuu")
+effect_name = "Poison"
+description = "Take 10 damage at the end of each turn."
+duration = 3
+is_buff = false
+stat_modifiers = {}
+unique_id = "poison"
+trigger_timing = "end"
+per_turn_effects = {
+"dot_damage": 10
+}
