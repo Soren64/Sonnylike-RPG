@@ -1,0 +1,23 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="rpg_sonnylike"
+run/main_scene="res://scenes/test_battle.tscn"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://scenes/backgrounds/icon.svg"
+
+[autoload]
+
+StatusEffectDB="*res://scripts/statuses/status_effect_database.gd"
+LevelLoader="*res://scripts/systems/level_loader.gd"
+Slots="*res://scripts/systems/slots.gd"
+CombatManagerSingleton="*res://scripts/systems/combat_manager.gd"
