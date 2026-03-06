@@ -50,24 +50,23 @@ Particularly, I am designing in it such a way so that I can write the code to al
 
 ## Features
 Current the game has:
+- CombatManager: A singleton class that tracks the battle state, managing the character's stats (adding/subtracting values), turn order, skill activation, and more!
 
--CombatManager: A singleton class that tracks the battle state, managing the character's stats (adding/subtracting values), turn order, skill activation, and more!
+- Level loading feature: Level resource files contain the necessary information to populate the CombatManger, including entity stats, skills, sprites, and the background scene. This provides me a reusable script to set up the battle instance with various variables I can tweak in these files. 
 
--Level loading feature: Level resource files contain the necessary information to populate the CombatManger, including entity stats, skills, sprites, and the background scene. This provides me a reusable script to set up the battle instance with various variables I can tweak in these files. 
+- Status Effects: Skills can apply status effects. Status effects can generally be either buffs or debuffs. Instances of status effects are tracked by the CombatManager. The CombatManager uses a singleton script that serves as a database for the IDs and associated scripts for the behavior of any given status. Status have a turn duration, and applies its effects at the start or end of a character's turn, depending on the listed behavior. At the end of the character's turn, the duration is decremented and drops off after the duration is 0. Status effects include stat modifers (+/- a particular stat), damage over time, stuns (prevents a character from acting on their turn), etc.
 
--Status Effects: Skills can apply status effects. Status effects can generally be either buffs or debuffs. Instances of status effects are tracked by the CombatManager. The CombatManager uses a singleton script that serves as a database for the IDs and associated scripts for the behavior of any given status. Status have a turn duration, and applies its effects at the start or end of a character's turn, depending on the listed behavior. At the end of the character's turn, the duration is decremented and drops off after the duration is 0. Status effects include stat modifers (+/- a particular stat), damage over time, stuns (prevents a character from acting on their turn), etc.
-
--UI: On the player's turn for one of their units, the player can select a skill from the skill bar and select the target. The arrow above a character represents the applicable target(s). The turn ring (ring below the character; at this time represented with a simple square) shows the current character taking a turn. Enemies will automatically select a random skill and target on their turn. The UI is a constant WIP!
+- UI: On the player's turn for one of their units, the player can select a skill from the skill bar and select the target. The arrow above a character represents the applicable target(s). The turn ring (ring below the character; at this time represented with a simple square) shows the current character taking a turn. Enemies will automatically select a random skill and target on their turn. The UI is a constant WIP!
 
 ---
 
 ## Development Roadmap (No Particular Order)
--Proper character sprites
--Anamation! 
--Flesh out skills and statuses. The design implementation is there, but add an array of skills and respective statuses.
--Character Progression: allow your units to level up and improve their stats and unlock new skills!
--Flesh out enemy AI: currently the AI selects a random skill and target. Add a script to make the enemy strategically use skills in a "smart" way. Potentially scaled off of a difficulty feature?
--Campaign: Create a sequence of playable levels (battles), instead of the single battle. Will have to transfer character progession between levels. Potential story and lore.
+- Proper character sprites
+- Anamation! 
+- Flesh out skills and statuses. The design implementation is there, but add an array of skills and respective statuses.
+- Character Progression: allow your units to level up and improve their stats and unlock new skills!
+- Flesh out enemy AI: currently the AI selects a random skill and target. Add a script to make the enemy strategically use skills in a "smart" way. Potentially scaled off of a difficulty feature?
+- Campaign: Create a sequence of playable levels (battles), instead of the single battle. Will have to transfer character progession between levels. Potential story and lore.
 
 ...And more!
 
