@@ -21,10 +21,12 @@ flowchart TD
     D --> E[Execute Turn]
     E --> F[Apply Skill]
     F --> G[Apply Status Effects]
-    G --> H[Update Status Durations]
-    H --> I{Battle Over?}
-    I -- No --> D
-    I -- Yes --> J[Battle End]
+    G --> H[Update Stats]
+    H --> I[Update Status Durations]
+    I --> J[Remove Dead Entities]
+    J --> K{Battle Over?}
+    K -- No --> D
+    K -- Yes --> L[Battle End]
 ```
 ---
 
@@ -47,6 +49,7 @@ Particularly, I am designing in it such a way so that I can write the code to al
 
 ## Features
 Current the game has:
+
 -CombatManager: A singleton class that tracks the battle state, managing the character's stats (adding/subtracting values), turn order, skill activation, and more!
 
 -Level loading feature: Level resource files contain the necessary information to populate the CombatManger, including entity stats, skills, sprites, and the background scene. This provides me a reusable script to set up the battle instance with various variables I can tweak in these files. 
