@@ -1,25 +1,54 @@
-# Sonnylike-RPG
+## Sonnylike-RPG
 Designing a Turn-based RPG from scratch, using Godot. This game takes inspiration from series of flash games that I've played in my youth, namely Legend of the Void and Sonny. General passion project. Name WIP.
 
 # Purpose
 This project while being made for personal fulfillment, it also serves as a means to practice personal project ownership, as well as system designing.
 With this project, I seek to develop the kind of skills that would be helpful for succeeding as a developer and Software Engineer.
 
-# Game Play
+---
+
+## Game Play
 The game revolves around skill based combat, where characters has a selection of abilities at their disposal to use in combat. The player has a team of characters they control by strategically selecting and using skills. The gameplay flow works by a selected turn order (determined by the speed stat, the turn order goes from highest speed to lowest regardless of team), where a character selects a skill on their turn and potential target(s) to use the skill on. 
 
 The game currently works in a single battle instance, where the goal of the battle is for the player to defeat all exisiting enemy units before the player's units die. Last team standing wins. 
 
-# Design Philosophy
+## Combat Flow:
+Battle Start
+     ↓
+Load Level Data
+     ↓
+Initialize Entities
+     ↓
+Determine Turn Order
+     ↓
+Execute Turn
+     ↓
+Apply Status Effects
+     ↓
+Update Durations
+     ↓
+Next Turn
+
+---
+
+## Design Philosophy
 For this game, I am looking to design the game in such a way it can be as modular as possible.
 Particularly, I am designing in it such a way so that I can write the code to allow myself to create any feasible skill you can realistically think of.
 
-The design of the game involves:
-Object-Oriented Programming - I've designed and created the classes used for defining the game objects. I use a lot of abstraction and inheritance in the classes to enable the design to be as modular as possible, so I can easily create new design features and instances of classes that are highly customizable, so that I can create new things such as skills or concepts for the game without having to redesign the game from the ground up. I've made a class diagram you can view here (link to be added).
+---
 
-Seperation of Concerns - Since the goal of making this game as modular as possible to allow myself to be able add new things later as I please with little effort, abstracting components of the game's design is primarily done through class abstraction and using custom scripts as well as Godot's resource files (think JSON). Lots of abstracting!
+## Engineering Concepts Demonstrated
 
-# Features
+- Object-Oriented Design
+- Separation of Concerns
+- Data-Driven Architecture
+- Explicit State Management
+- Modular System Design
+- Extensible Gameplay Systems
+
+---
+
+## Features
 Current the game has:
 -CombatManager: A singleton class that tracks the battle state, managing the character's stats (adding/subtracting values), turn order, skill activation, and more!
 
@@ -29,7 +58,9 @@ Current the game has:
 
 -UI: On the player's turn for one of their units, the player can select a skill from the skill bar and select the target. The arrow above a character represents the applicable target(s). The turn ring (ring below the character; at this time represented with a simple square) shows the current character taking a turn. Enemies will automatically select a random skill and target on their turn. The UI is a constant WIP!
 
-# To Add
+---
+
+## Development Roadmap (No Particular Order)
 -Proper character sprites
 -Anamation! 
 -Flesh out skills and statuses. The design implementation is there, but add an array of skills and respective statuses.
@@ -39,6 +70,7 @@ Current the game has:
 
 ...And more!
 
+---
 
-# License
+## License
 None! This is a personal project made using Godot for fun and developing professional skills. All assets used in the game are either default free assests given in Godot, or either designed by me or uses free assets available online. I ask if you wish to use any of the code that you ask for permission, or seek collaboration with me. You can find my avaiable contact information on my github profile.
