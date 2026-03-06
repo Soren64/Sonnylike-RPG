@@ -12,7 +12,7 @@ The game revolves around skill based combat, where characters has a selection of
 
 The game currently works in a single battle instance, where the goal of the battle is for the player to defeat all exisiting enemy units before the player's units die. Last team standing wins. 
 
-## Combat Flow:
+# Combat Flow
 Battle Start
      ↓
 Load Level Data
