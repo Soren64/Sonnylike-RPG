@@ -13,6 +13,7 @@ The game revolves around skill based combat, where characters has a selection of
 The game currently works in a single battle instance, where the goal of the battle is for the player to defeat all exisiting enemy units before the player's units die. Last team standing wins. 
 
 ## Combat Flow
+The combat system operates as a deterministic turn-based state loop coordinated by the CombatManager. The diagram below illustrates the high-level execution flow during a battle.
 ```mermaid
 flowchart TD
     A[Battle Start] --> B[Load Level Data]
