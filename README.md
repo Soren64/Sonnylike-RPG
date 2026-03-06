@@ -15,18 +15,25 @@ The game currently works in a single battle instance, where the goal of the batt
 # Combat Flow
 Battle Start
      ↓
+     
 Load Level Data
      ↓
+     
 Initialize Entities
      ↓
+     
 Determine Turn Order
      ↓
+     
 Execute Turn
      ↓
+     
 Apply Status Effects
      ↓
+     
 Update Durations
      ↓
+     
 Next Turn
 
 ---
