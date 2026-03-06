@@ -19,11 +19,12 @@ flowchart TD
     B --> C[Initialize Entities]
     C --> D[Determine Turn Order]
     D --> E[Execute Turn]
-    E --> F[Apply Status Effects]
-    F --> G[Update Status Durations]
-    G --> H{Battle Over?}
-    H -- No --> D
-    H -- Yes --> I[Battle End]
+    E --> F[Apply Skill]
+    F --> G[Apply Status Effect(s)]
+    G --> H[Update Status Durations]
+    H --> I{Battle Over?}
+    I -- No --> D
+    I -- Yes --> J[Battle End]
 ```
 ---
 
