@@ -25,9 +25,10 @@ flowchart TD
     G --> H[Update Stats]
     H --> I[Update Status Durations]
     I --> J[Remove Dead Entities]
-    J --> K{Battle Over?}
-    K -- No --> D
-    K -- Yes --> L[Battle End]
+    J --> K[End Turn]
+    K --> L{Battle Over?}
+    L -- No --> D
+    L -- Yes --> M[Battle End]
 ```
 ---
 
