@@ -20,7 +20,7 @@ flowchart TD
     C --> D[Determine Turn Order]
     D --> E[Execute Turn]
     E --> F[Apply Skill]
-    F --> G[Apply Status Effect(s)]
+    F --> G[Apply Status Effects]
     G --> H[Update Status Durations]
     H --> I{Battle Over?}
     I -- No --> D
