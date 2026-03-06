@@ -12,41 +12,19 @@ The game revolves around skill based combat, where characters has a selection of
 
 The game currently works in a single battle instance, where the goal of the battle is for the player to defeat all exisiting enemy units before the player's units die. Last team standing wins. 
 
-# Combat Flow
-Battle Start
-
-     ↓
-     
-Load Level Data
-
-     ↓
-     
-Initialize Entities
-
-     ↓
-     
-Determine Turn Order
-
-     ↓
-     
-Execute Turn
-
-     ↓
-
-Apply Skill
-
-     ↓
-     
-Apply Status Effect(s)
-
-     ↓
-     
-Update Durations
-
-     ↓
-     
-Next Turn
-
+## Combat Flow
+```mermaid
+flowchart TD
+    A[Battle Start] --> B[Load Level Data]
+    B --> C[Initialize Entities]
+    C --> D[Determine Turn Order]
+    D --> E[Execute Turn]
+    E --> F[Apply Status Effects]
+    F --> G[Update Status Durations]
+    G --> H{Battle Over?}
+    H -- No --> D
+    H -- Yes --> I[Battle End]
+```
 ---
 
 ## Design Philosophy
